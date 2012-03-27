@@ -1,0 +1,14 @@
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ApplicationIcon.png
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\Background.png
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ConferenceApp.dll
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ConferenceApp.pdb
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\AppManifest.xaml
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ConferenceApp.xap
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\WP7CordovaClassLib.dll
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\ConferenceApp.csprojResolveAssemblyReference.cache
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\App.g.i.cs
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\MainPage.g.i.cs
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\ConferenceApp.g.resources
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\ConferenceApp.dll
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\ConferenceApp.pdb
+C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\XapCacheFile.xml
