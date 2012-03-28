@@ -1,10 +1,10 @@
-﻿<xapCache source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ConferenceApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="3/28/2012 6:07:17 AM">
+﻿<xapCache source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ConferenceApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="3/28/2012 6:47:42 AM">
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="3/27/2012 5:21:02 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Background.png" archivePath="Background.png" lastWriteTime="3/27/2012 5:20:48 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/27/2012 5:20:48 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\ConferenceApp.dll" archivePath="ConferenceApp.dll" lastWriteTime="3/27/2012 6:56:29 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\GapLib\WP7CordovaClassLib.dll" archivePath="WP7CordovaClassLib.dll" lastWriteTime="3/27/2012 5:20:48 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\CordovaSourceDictionary.xml" archivePath="CordovaSourceDictionary.xml" lastWriteTime="3/28/2012 6:07:16 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\CordovaSourceDictionary.xml" archivePath="CordovaSourceDictionary.xml" lastWriteTime="3/28/2012 6:47:42 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\ajax-loader.png" archivePath="www\images\ajax-loader.png" lastWriteTime="3/27/2012 5:46:22 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\icons-18-black.png" archivePath="www\images\icons-18-black.png" lastWriteTime="3/27/2012 5:46:22 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\icons-18-white.png" archivePath="www\images\icons-18-white.png" lastWriteTime="3/27/2012 5:46:22 AM" />
@@ -19,7 +19,7 @@
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\stopGap.js" archivePath="www\stopGap.js" lastWriteTime="3/27/2012 5:33:08 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\GapLib\WP7CordovaClassLib.dll" archivePath="GapLib\WP7CordovaClassLib.dll" lastWriteTime="3/27/2012 5:20:48 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\cordova-1.5.0.js" archivePath="www\cordova-1.5.0.js" lastWriteTime="3/27/2012 5:20:48 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\index.html" archivePath="www\index.html" lastWriteTime="3/28/2012 6:07:13 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\index.html" archivePath="www\index.html" lastWriteTime="3/28/2012 6:47:38 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\master.css" archivePath="www\master.css" lastWriteTime="3/27/2012 5:20:48 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="3/27/2012 5:20:48 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/27/2012 5:21:02 AM" />
