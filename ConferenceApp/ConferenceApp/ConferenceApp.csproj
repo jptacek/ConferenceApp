@@ -79,6 +79,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CordovaSourceDictionary.xml" />
+    <Content Include="www\images\ajax-loader.png" />
+    <Content Include="www\images\icons-18-black.png" />
+    <Content Include="www\images\icons-18-white.png" />
+    <Content Include="www\images\icons-36-black.png" />
+    <Content Include="www\images\icons-36-white.png" />
+    <Content Include="www\jquery-1.7.1.js" />
+    <Content Include="www\jquery-1.7.2.js" />
+    <Content Include="www\jquery.mobile-1.0.1.css" />
+    <Content Include="www\jquery.mobile-1.0.1.js" />
+    <Content Include="www\jquery.mobile.structure-1.0.1.css" />
+    <Content Include="www\speakers.html" />
     <Content Include="www\stopGap.js" />
     <None Include="BuildManifestProcessor.js" />
     <Content Include="GapLib\WP7CordovaClassLib.dll" />

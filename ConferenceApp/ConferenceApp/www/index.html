@@ -1,37 +1,107 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     
-    <title>Cordova WP7</title>
+        <title>WP7</title>
     
-	  <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+        <link rel="stylesheet" href="jquery.mobile-1.0.1.css"/>
+        <script src="jquery-1.7.1.js"></script>
+        <script src="jquery.mobile-1.0.1.js"></script>
             
-      <!--<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>-->
-      <script type="text/javascript" charset="utf-8" src="stopgap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="stopgap.js"></script>
        
-      <script type="text/javascript">
+        <script type="text/javascript">
 
-        document.addEventListener("deviceready",onDeviceReady,false);
+            document.addEventListener("deviceready",onDeviceReady,false);
 
         // once the device ready event fires, you can safely do your thing! -jm
-        function onDeviceReady()
-        {
-            document.getElementById("welcomeMsg").innerHTML += "Cordova is ready! version=" + window.device.cordova;
-            console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
-            
-        }
+            function onDeviceReady()
+            {
+                console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
 
-      </script>
-      
-	 
-	  
+            }
 
-  </head>
-  <body>
-    <h1>Hello Cordova</h1>
-      <div id="welcomeMsg"></div>
-  </body>
-      <script type="text/javascript">          StopGap();</script>
+            $(function () {
+                $('#savebutton').click(function () {
+                    window.localStorage.setItem("name", $('#name').val());
+                });
+
+                $('#newpage').live('pageshow', function () {
+                    var person = window.localStorage.getItem("name");
+                    if (person.length > 0) {
+                        $('name').val ( person);
+                    }
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <div id="home" data-role="page">
+            <div data-role="header">
+                <h1>2012 FVNUG Day of .NET</h1>
+            </div>
+            <div data-role="content">
+                Fox valley day of .net<br/>
+                <a href="#speakers" data-role="button">Speakers</a>
+                <!-- <a href="#agenda" data-role="button">Agenda</a>-->
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Designed by Skyline Technologies</h4>
+            </div>
+        </div>
+        <div id="speakers" data-role="page">
+            <div data-role="header">
+                <h1>2012 FVNUG Day of .NET</h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" >
+                    <li><a href="#ptacekbio">John Ptacek</a></li>
+                    <li><a href="#">Acura</a></li>
+                    <li><a href="#">Audi</a></li>
+                    <li><a href="#">BMW</a></li>
+                    <li><a href="#">Cadillac</a></li>
+                    <li><a href="#">Ferrari</a></li>
+                </ul>
+                            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Designed by Skyline Technologies</h4>
+            </div>
+        </div>
+        <div id="#ptacekbio" data-role="page">
+            <div data-role="header">
+                <h1>John Ptacek Bio</h1>
+            </div>
+            <div data-role="content">
+                    John is a Senior Engineer at Skyline Technologies, Inc. where his primary focus is the design, development and solutions for using SharePoint for clients around the globe. John has 
+                    made presentations at .NET User Groups throughout the Midwest. John is a graduate of the University of Wisconsin - Madison in Nuclear Engineering.
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h4>Designed by Skyline Technologies</h4>
+            </div>
+        </div>
+
+        <!-- <div id="agenda" data-role="page">
+            <div data-role="header">
+                <h1>2012 FVNUG Day of .NET - Agenda</h1>
+            </div>
+            <div data-role="content">
+                <label for="name">What is your nanme</label>
+                <input type="text" name="name" id="name" value=""/>
+                <a href="" id="savebutton" data-role="button">Save</a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+               <h4>Designed by Skyline Technologies</h4>
+            </div>
+
+        </div>-->
+    </body>
+    <!-- <script type="text/javascript">
+        StopGap();
+    </script> -->
 </html>
+
