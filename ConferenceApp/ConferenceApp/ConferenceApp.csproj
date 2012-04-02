@@ -89,7 +89,7 @@
     <Content Include="www\jquery.mobile-1.0.1.css" />
     <Content Include="www\jquery.mobile-1.0.1.js" />
     <Content Include="www\jquery.mobile.structure-1.0.1.css" />
-    <Content Include="www\speakers.html" />
+    <Content Include="www\twitter.html" />
     <Content Include="www\stopGap.js" />
     <None Include="BuildManifestProcessor.js" />
     <Content Include="GapLib\WP7CordovaClassLib.dll" />

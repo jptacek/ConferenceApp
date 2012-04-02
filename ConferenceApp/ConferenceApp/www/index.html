@@ -12,7 +12,33 @@
             
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="stopgap.js"></script>
-       
+        <script type="text/javascript">
+            $('#jTweetsAnywhereSample').jTweetsAnywhere({
+                searchParams: ['q=jptacek'],
+                count: 10,
+                showTweetFeed: {
+                    autoConformToTwitterStyleguide: true,
+                    showTimestamp: {
+                        refreshInterval: 15
+                    },
+                    autorefresh: {
+                        mode: 'trigger-insert',
+                        interval: 30
+                    },
+                    paging: { mode: 'more' }
+                },
+                onDataRequestHandler: function (stats, options) {
+                    if (stats.dataRequestCount < 11) {
+                        return true;
+                    }
+                    else {
+                        stopAutorefresh(options);
+                        alert("To avoid struggling with Twitter's rate limit, we stop loading data after 10 API calls.");
+                    }
+                }
+            });
+        </script>
+
         <script type="text/javascript">
 
             document.addEventListener("deviceready",onDeviceReady,false);
@@ -51,7 +77,16 @@
                 <!-- <a href="#agenda" data-role="button">Agenda</a>-->
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -75,7 +110,14 @@
                 </ul>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" class="ui-btn-active">Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -90,7 +132,14 @@
                 <a href="#ptaceksession">Session: PhoneGap</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -105,7 +154,14 @@
                 <a href="#bocksession" data-role="button">Session: .NET Compiler</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -119,7 +175,14 @@
                 <a href="#bellersession" data-role="button">Session: .NET Gadgeteer</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -134,7 +197,14 @@
                 <a href="#bostsession" data-role="button">Session: Windows Phone Dev</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
 
@@ -148,7 +218,14 @@
                 <a href="#candellsession" data-role="button">Session: SignalR</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
 
@@ -162,7 +239,14 @@
                 <a href="#edwardssession" data-role="button">Session: MVVC with Caliburn</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="feirtagbio" data-role="page">
@@ -175,7 +259,14 @@
                 <a href="#feirtagsession" data-role="button">Session: .NET Micro Framework</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="felderbio" data-role="page">
@@ -188,7 +279,14 @@
                 <a href="#feldersession" data-role="button">Session: WF4 and AppFabric</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="gavinbio" data-role="page">
@@ -202,7 +300,14 @@
                 <a href="#gavinsession" data-role="button">Session: Task Library</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="levenhagenbio" data-role="page">
@@ -217,7 +322,14 @@
                 <a href="#levenhagensession" data-role="button">Session: Kinect Dev</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="maungbio" data-role="page">
@@ -231,7 +343,14 @@
                 <a href="#muangsession" data-role="button">Session: Robotics Studio</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="millerbio" data-role="page">
@@ -244,7 +363,14 @@
                 <a href="#millersession" data-role="button">Session: Convert Silverlight to Win 8</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="normingtonbio" data-role="page">
@@ -258,7 +384,14 @@
                 <a href="#normingtonsession" data-role="button">Session: CQRS and Event Sourcing</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="paynebio" data-role="page">
@@ -272,7 +405,14 @@
                 <a href="#paynesession" data-role="button">Session: Win 8 and Javascript</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="seelybio" data-role="page">
@@ -285,7 +425,14 @@
                 <a href="#seelysession" data-role="button">Session: Azure Service Bus</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
         <div id="sellbio" data-role="page">
@@ -298,7 +445,14 @@
                 <a href="#sellsession" data-role="button">Session: Node.js</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div> 
 
@@ -327,12 +481,78 @@
                 <a href="#bockbio" data-role="button">Speaker: Jason Bock</a>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h4>Designed by Skyline Technologies</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
+        <div id="twitter" data-role="page">
+            <div data-role="header">
+                <h1>Twitter Feed</h1>
+            </div>
+            <div data-role="content">
+                <h1>Fox Valley .NET User Group 2012 Day of .NET</h1>
+                <p>The Fox Valley .NET User Group is proud to bring you it 5th day of .NET. This year we have more greawt speakers and greawt prizes!
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div id="about" data-role="page">
+            <div data-role="header">
+                <h1>Day of .NET</h1>
+            </div>
+            <div data-role="content">
+                <h1>Fox Valley .NET User Group 2012 Day of .NET</h1>
+                <p>The Fox Valley .NET User Group is proud to bring you it 5th day of .NET. This year we have more great speakers and great prizes!</p>
+                <p>This year's locatio is the Fox Valley Technical College, located at 1825 N. Bluemound Drive Appleton, WI 54912-2277</p>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about" class="ui-btn-active">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div id="twitter" data-role="page">
+            <div data-role="header">
+                <h1>Twitter Feed</h1>
+            </div>
+            <div data-role="content">
+                <h1>Twitter Hashtag - #FVDDN</h1>
+                <div id="jTweetsAnywhereSample">
+                </div>
+            </div> 
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions">Sessions</a></li>
+                        <li><a href="#twitter"  class="ui-btn-active">Twitter</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- <div id="agenda" data-role="page">
             <div data-role="header">
                 <h1>2012 FVNUG Day of .NET - Agenda</h1>
