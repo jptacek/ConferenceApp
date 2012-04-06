@@ -1,25 +1,28 @@
-﻿<xapCache source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ConferenceApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/4/2012 7:06:26 AM">
+﻿<xapCache source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\ConferenceApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/6/2012 11:59:03 AM">
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="3/27/2012 5:21:02 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Background.png" archivePath="Background.png" lastWriteTime="3/27/2012 5:20:48 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/27/2012 5:20:48 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\ConferenceApp.dll" archivePath="ConferenceApp.dll" lastWriteTime="4/4/2012 6:24:45 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\obj\Debug\ConferenceApp.dll" archivePath="ConferenceApp.dll" lastWriteTime="4/6/2012 11:35:24 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\GapLib\WP7CordovaClassLib.dll" archivePath="WP7CordovaClassLib.dll" lastWriteTime="3/27/2012 5:20:48 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\CordovaSourceDictionary.xml" archivePath="CordovaSourceDictionary.xml" lastWriteTime="4/4/2012 7:06:25 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\CordovaSourceDictionary.xml" archivePath="CordovaSourceDictionary.xml" lastWriteTime="4/6/2012 11:59:03 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\ajax-loader.png" archivePath="www\images\ajax-loader.png" lastWriteTime="3/27/2012 5:46:22 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\design_by_logo.png" archivePath="www\images\design_by_logo.png" lastWriteTime="4/6/2012 7:40:45 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\header-background.png" archivePath="www\images\header-background.png" lastWriteTime="4/6/2012 7:41:42 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\icons-18-black.png" archivePath="www\images\icons-18-black.png" lastWriteTime="3/27/2012 5:46:22 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\icons-18-white.png" archivePath="www\images\icons-18-white.png" lastWriteTime="3/27/2012 5:46:22 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\icons-36-black.png" archivePath="www\images\icons-36-black.png" lastWriteTime="3/27/2012 5:46:22 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\images\icons-36-white.png" archivePath="www\images\icons-36-white.png" lastWriteTime="3/27/2012 5:46:22 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\styles.css" archivePath="www\styles.css" lastWriteTime="4/6/2012 9:13:02 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\jquery-1.7.1.js" archivePath="www\jquery-1.7.1.js" lastWriteTime="3/27/2012 6:50:52 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\jquery-1.7.2.js" archivePath="www\jquery-1.7.2.js" lastWriteTime="3/27/2012 5:45:14 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\jquery.mobile-1.0.1.css" archivePath="www\jquery.mobile-1.0.1.css" lastWriteTime="3/27/2012 5:46:10 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\jquery.mobile-1.0.1.css" archivePath="www\jquery.mobile-1.0.1.css" lastWriteTime="4/6/2012 11:59:03 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\jquery.mobile-1.0.1.js" archivePath="www\jquery.mobile-1.0.1.js" lastWriteTime="3/27/2012 5:46:10 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\jquery.mobile.structure-1.0.1.css" archivePath="www\jquery.mobile.structure-1.0.1.css" lastWriteTime="3/27/2012 5:46:10 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\jquery.mobile.structure-1.0.1.css" archivePath="www\jquery.mobile.structure-1.0.1.css" lastWriteTime="4/6/2012 11:59:03 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\stopGap.js" archivePath="www\stopGap.js" lastWriteTime="3/27/2012 5:33:08 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\GapLib\WP7CordovaClassLib.dll" archivePath="GapLib\WP7CordovaClassLib.dll" lastWriteTime="3/27/2012 5:20:48 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\cordova-1.5.0.js" archivePath="www\cordova-1.5.0.js" lastWriteTime="3/27/2012 5:20:48 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\index.html" archivePath="www\index.html" lastWriteTime="4/4/2012 7:06:25 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\index.html" archivePath="www\index.html" lastWriteTime="4/6/2012 11:55:44 AM" />
   <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\www\master.css" archivePath="www\master.css" lastWriteTime="3/27/2012 5:20:48 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="3/27/2012 5:20:48 AM" />
-  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/27/2012 5:21:02 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="4/6/2012 11:20:50 AM" />
+  <file source="C:\Dev\git\ConferenceApp\ConferenceApp\ConferenceApp\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="4/6/2012 11:35:25 AM" />
 </xapCache>

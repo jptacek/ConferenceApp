@@ -10,7 +10,11 @@
     <FilePath Value="www\jquery.mobile.structure-1.0.1.css"/>
     <FilePath Value="www\master.css"/>
     <FilePath Value="www\stopGap.js"/>
+    <FilePath Value="www\styles.css"/>
     <FilePath Value="www\images\ajax-loader.png"/>
+    <FilePath Value="www\images\design_by_logo.png"/>
+    <FilePath Value="www\images\foo.png"/>
+    <FilePath Value="www\images\header-background.png"/>
     <FilePath Value="www\images\icons-18-black.png"/>
     <FilePath Value="www\images\icons-18-white.png"/>
     <FilePath Value="www\images\icons-36-black.png"/>

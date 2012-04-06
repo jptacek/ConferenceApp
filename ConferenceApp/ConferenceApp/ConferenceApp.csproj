@@ -80,10 +80,13 @@
   <ItemGroup>
     <Content Include="CordovaSourceDictionary.xml" />
     <Content Include="www\images\ajax-loader.png" />
+    <Content Include="www\images\design_by_logo.png" />
+    <Content Include="www\images\header-background.png" />
     <Content Include="www\images\icons-18-black.png" />
     <Content Include="www\images\icons-18-white.png" />
     <Content Include="www\images\icons-36-black.png" />
     <Content Include="www\images\icons-36-white.png" />
+    <Content Include="www\styles.css" />
     <Content Include="www\jquery-1.7.1.js" />
     <Content Include="www\jquery-1.7.2.js" />
     <Content Include="www\jquery.mobile-1.0.1.css" />
