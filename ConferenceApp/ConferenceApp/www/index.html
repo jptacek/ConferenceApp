@@ -12,7 +12,7 @@
         <script src="jquery.mobile-1.0.1.js"></script>
             
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
-        <!-- <script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
+         <!-- <script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
 
         <script type="text/javascript">
             $(function () {
@@ -24,9 +24,9 @@
                         console.log(json_results);
                         $.each(json_results.results, function (key) {
                             $('#twitList').append('<h3"><a href="http://twitter.com/' + json_results.results[key].from_user + '">' +
-					            '<img src="' + json_results.results[key].profile_image_url + '"/>' +json_results.results[key].from_user + '</h3></a>' +
-					            '<p>' + json_results.results[key].text + '</p>' 
-					            );
+                                '<img src="' + json_results.results[key].profile_image_url + '"/>' +json_results.results[key].from_user + '</h3></a>' +
+                                '<p>' + json_results.results[key].text + '</p>' 
+                            );
 
                         });
                         // Need to refresh list after AJAX call
@@ -49,27 +49,189 @@
             }
 
             $(function () {
-                var navText = '<ul><li><a href="#speakers" >Speakers</a></li><li><a href="#speakers" >Speakers</a></li></ul>';
-                console.log("Nav Text:" + navText);
-
-                $('#navBarHome').html(navText);
-                $('#navBarHome').refresh();
-                //$('#navBarHome').append('<li><a href="#speakers" >Speakers</a></li>');
-                // $('#navBarHome').append('<li><a href="#sessions">Sessions</a></li>');
-                // $('#navBarHome').append('<li><a href="#twitter">Twitter</a></li>');
-                // $('#navBarHome').append('<li><a href="#about">About</a></li>');
-
-                $('#savebutton').click(function () {
-                    window.localStorage.setItem("name", $('#name').val());
+                $('.sessionsave').click(function () {
+                    console.log("Session save: " + $(this).attr('id'));
+                    SaveUserSession($(this).attr('id'));
                 });
 
-                $('#newpage').live('pageshow', function () {
-                    var person = window.localStorage.getItem("name");
-                    if (person.length > 0) {
-                        $('name').val(person);
-                    }
+
+
+            });
+
+            $(function () {
+                $('.mysessiontag').click(function () {
+                    console.log("Session data: ");
+                    var sessionHtml = GetSessionHtml();
+                    $('#mysessiondata').html(sessionHtml);
+                    $('#mysessiondata').refresh();
+
                 });
             });
+
+            function SaveUserSession(sessionToAttend) {
+                switch (sessionToAttend) {
+                case 'ptaceksessionsave':
+                    console.log("Save Ptacek session");
+                    window.localStorage.setItem("session1", "ptaceksession");
+                    break;
+                case 'millersessionsave':
+                    console.log("Save Miller session");
+                    window.localStorage.setItem("session1", "millersession");
+                    break;
+                case 'levenhagensessionsave':
+                    console.log("Save Levenhagen session");
+                    window.localStorage.setItem("session1", "levenhagensession");
+                    break;
+                case 'normingtonsessionsave':
+                    console.log("Save Normington session");
+                    window.localStorage.setItem("session1", "normingtonsession");
+                    break;
+                case 'bostsessionsave':
+                    console.log("Save bost session");
+                    window.localStorage.setItem("session2", "bostsession");
+                    break;
+                case 'seelysessionsave':
+                    console.log("Save seely session");
+                    window.localStorage.setItem("session2", "seelysession");
+                    break;
+                case 'boydsessionsave':
+                    console.log("Save boyd session");
+                    window.localStorage.setItem("session2", "boydsession");
+                    break;
+                case 'bocksessionsave':
+                    console.log("Save bicjsession");
+                    window.localStorage.setItem("session2", "bocksession");
+                    break;
+
+                case 'candellsessionsave':
+                    console.log("Save candell session");
+                    window.localStorage.setItem("session3", "candellsession");
+                    break;
+                case 'edwardssessionsave':
+                    console.log("Save edwards session");
+                    window.localStorage.setItem("session3", "edwardssession");
+                    break;
+                case 'maungsessionsave':
+                    console.log("Save maung session");
+                    window.localStorage.setItem("session3", "maungsession");
+                    break;
+                case 'feldersessionsave':
+                    console.log("Save felder session");
+                    window.localStorage.setItem("session3", "feldersession");
+                    break;
+
+                case 'sellsessionsave':
+                    console.log("Save sell session");
+                    window.localStorage.setItem("session4", "sellsession");
+                    break;
+                case 'paynesessionsave':
+                    console.log("Save payne session");
+                    window.localStorage.setItem("session4", "paynesession");
+                    break;
+                case 'feirtagsessionsave':
+                    console.log("Save feirtag session");
+                    window.localStorage.setItem("session4", "feirtagsession");
+                    break;
+                case 'gavinsessionsave':
+                    console.log("Save gavin session");
+                    window.localStorage.setItem("session4", "gavinsession");
+                    break;
+
+                }
+            }
+
+            function GetSessionHtml() {
+                var sessionHtml = '<ul >';
+                var firstSessionHtml = window.localStorage.getItem("session1");
+                var secondSessionHtml = window.localStorage.getItem("session2");
+                var thirdSessionHtml = window.localStorage.getItem("session3");
+                var fourthSessionHtml = window.localStorage.getItem("session4");
+
+                if (firstSessionHtml != null) {
+                    console.log("first session "+ firstSessionHtml);
+                    sessionHtml += '<li>9:00 - 10:15 ';
+                    switch (firstSessionHtml) {
+
+                        case 'ptaceksession':
+                            sessionHtml += '<a href="#ptaceksession">Write Once Mobile Apps</a></li>';
+                            break;
+                        case 'millersession':
+                            sessionHtml += '<a href="#millersession">Convert SL to Win 8</a></li>';
+                            break;
+                        case 'levenhagensession':
+                            sessionHtml += '<a href="#levenhagensession">Kinect</a></li>';
+                            break;
+                        case 'normingtonsession':
+                            sessionHtml += '<a href="#normingtonsession">CQRS</a></li>';
+                            break;
+                    }
+                }
+
+                if (secondSessionHtml != null) {
+                    console.log("second session " + secondSessionHtml);
+                    sessionHtml += '<li> 10:30 - 11:45 ';
+                    switch (secondSessionHtml) {
+
+                        case 'bostsession':
+                            sessionHtml += '<a href="#bostsession">WP7 Development</a></li>';
+                            break;
+                        case 'seelysession':
+                            sessionHtml += '<a href="#seelysession">Azure Service Bus</a></li>';
+                            break;
+                        case 'boydsession':
+                            sessionHtml += '<a href="#boydsession">OData Benefits</a></li>';
+                            break;
+                        case 'bocksession':
+                            sessionHtml += '<a href="#bocksession">.NET Complier/Rosylyn</a></li>';
+                            break;
+                    }
+                }
+
+                sessionHtml += '<li>11:45 - 1:00 <a href="#sellsession2">Content Before Chrome</a></li>';
+                
+                if (thirdSessionHtml != null) {
+                    console.log("thrid session " + thirdSessionHtml);
+                    sessionHtml += '<li>1:00 - 2:15 ';
+                    switch (thirdSessionHtml) {
+
+                        case 'candellsession':
+                            sessionHtml += '<a href="#candellsession">SignalR</a></li>';
+                            break;
+                        case 'edwardssession':
+                            sessionHtml += '<a href="#edwardssession">MVVM</a></li>';
+                            break;
+                        case 'maungsession':
+                            sessionHtml += '<a href="#maungsession">Robotics Studio</a></li>';
+                            break;
+                        case 'feldersession':
+                            sessionHtml += '<a href="#feldersession">WF4 and AppFabric</a></li>';
+                            break;
+                    }
+                }
+
+                if (fourthSessionHtml != null) {
+                    console.log("fourth session " + fourthSessionHtml);
+                    sessionHtml += '<li> 2:30 - 3:45 ';
+                    switch (fourthSessionHtml) {
+
+                        case 'sellsession':
+                            sessionHtml += '<a href="#sellsession">Node.JS</a></li>';
+                            break;
+                        case 'paynesession':
+                            sessionHtml += '<a href="#paynesession">Javascript and Win 8</a></li>';
+                            break;
+                        case 'feirtagsession':
+                            sessionHtml += '<a href="#feirtagsession">.NET Micro</a></li>';
+                            break;
+                        case 'gavinsession':
+                            sessionHtml += '<a href="#gavinsession">Task Library</a></li>';
+                            break;
+                    }
+                }
+
+                sessionHtml += '</ul>';
+                return sessionHtml;
+            }
 
         </script>
     </head>
@@ -86,11 +248,18 @@
                 <a href="#speakers" data-role="button">Speakers</a>
                 <a href="#sessions" data-role="button">Sessions</a>
                 <a href="#twitter" data-role="button">Twitter Feed</a>
-                <a href="#about" data-role="button">About</a>
+                <a href="#about" data-role="button">About</a>                
+                <a class="mysessiontag" href="#mysessions" data-role="button">My Sessions</a>
             </div>
-            <div data-role="footer" data-position="fixed" class="contentDisplay" >
-                <p align="center" ><img src="images/design_by_logo.png" width="148" height="78" alt="logo"></p>
-                <div data-role="navbar" id="navBarHome" >
+                 <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar" id="navBarHome">
+                    <ul>
+                        <li><a href="#speakers" class="ui-btn-active">Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -104,8 +273,8 @@
                 <ul data-role="listview"  data-inset="true" data-filter="true">
                     <li><a href="#ptacekbio">John Ptacek, Skyline Technologies</a></li>
                     <li><a href="#bockbio">Jason Bock, Magenic</a></li>
-                    <li><a href="#bellerbio">Ray Beller, BrightStar Technology</a></li>
                     <li><a href="#bostbio">Dave Bost, Microsoft</a></li>
+                    <li><a href="#boydbio">Eric Boyd, responsiveX</a></li>
                     <li><a href="#candellbio">Brad Candell, IDEXX Labs</a></li>
                     <li><a href="#edwardsbio">Brent Edwards, Magenic</a></li>
                     <li><a href="#feirtagbio">Travis Feirtag</a></li>
@@ -120,8 +289,8 @@
                     <li><a href="#seelybio">Scott Seely</a></li>
                 </ul>
             </div>
-            <div data-role="footer" data-position="fixed" class="contentDisplay" >
-                 <p align="center"><img src="images/design_by_logo.png" width="148" height="78"></p>
+                 <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer" data-position="fixed"  >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" class="ui-btn-active">Speakers</a></li>
@@ -132,7 +301,108 @@
                 </div>
             </div>
         </div>
+        
+        <div id="sessions" data-role="page">
+            <div data-role="header">
+                <div id="Div37" class="headerbio">Sessions By Time</div>
+            </div>
 
+            <a class="mysessiontag" href="#mysessions" data-role="button">My Sessions</a>
+            <div data-role="content" class="contentDisplay">
+                <ul data-role="listview"  data-theme="c" data-dividertheme="d">
+                    <li datarole="list-divider">9:00 - 10:15</li>
+                    <li><a href="#ptaceksession">Write Once Mobile Apps</a></li>
+                    <li><a href="#millersession">Convert SL to Win 8</a></li>
+                    <li><a href="#levenhagensession">Kinect</a></li>
+                    <li><a href="#normingtonsession">CQRS</a></li>
+
+                    <li datarole="list-divider">10:30 - 11:45</li>
+                    <li><a href="#bostsession">WP7 Development</a></li>
+                    <li><a href="#seelysession">Azure Service Bus</a></li>
+                    <li><a href="#boydsession">OData Benefits</a></li>
+                    <li><a href="#bocksession">.NET Complier/Rosylyn</a></li>
+
+                    <li datarole="list-divider">Lunch</li>
+                    <li><a href="#sellsession2">Content Before Chrome</a></li>
+
+                    <li datarole="list-divider">1:00 - 2:15</li>
+                    <li><a href="#candellsession">SignalR</a></li>
+                    <li><a href="#edwardssession">MVVM</a></li>
+                    <li><a href="#maungsession">Robotics Studio</a></li>
+                    <li><a href="#feldersession">WF4 and AppFabric</a></li>
+
+                    <li datarole="list-divider">2:30 - 3:45</li>
+                    <li><a href="#sellsession">Node.JS</a></li>
+                    <li><a href="#paynesession">Javascript and Win 8</a></li>
+                    <li><a href="#feirtagsession">.NET Micro</a></li>
+                    <li><a href="#gavinsession">Task Library</a></li>
+                </ul>
+            </div>
+            <a href="#sessionsbytrack" data-role="button">Sessions By Track</a>
+            <a class="mysessiontag"  href="#mysessions" data-role="button">My Sessions</a>
+            <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer" data-position="fixed"  >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions" class="ui-btn-active">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                        <div id="sessionsbytrack" data-role="page">
+                <div data-role="header">
+                <div id="Div39" class="headerbio">Sessions By Time</div>
+            </div>
+
+                    <div data-role="content" class="contentDisplay">
+                        <ul data-role="listview"  data-theme="c" data-dividertheme="d">
+                            <li datarole="list-divider">Web/Mobile (Commons)</li>
+                            <li><a href="#ptaceksession">Write Once Mobile Apps</a></li>
+                            <li><a href="#bostsession">WP7 Development</a></li>
+                            <li><a href="#candellsession">SignalR</a></li>
+                            <li><a href="#sellsession">Node.JS</a></li>
+
+
+                            <li datarole="list-divider">Win8/Azure/Xaml (F180)</li>
+                            <li><a href="#millersession">Convert SL to Win 8</a></li>
+                            <li><a href="#seelysession">Azure Service Bus</a></li>
+                            <li><a href="#edwardssession">MVVM</a></li>
+                            <li><a href="#paynesession">Javascript and Win 8</a></li>
+
+
+                            <li datarole="list-divider">Lunch (Commons)</li>
+                            <li><a href="#sellsession2">Content Before Chrome</a></li>
+
+                            <li datarole="list-divider">MF/Kinect/Data (E157)</li>
+                            <li><a href="#levenhagensession">Kinect</a></li>
+                            <li><a href="#boydsession">OData Benefits</a></li>
+                            <li><a href="#maungsession">Robotics Studio</a></li>
+                            <li><a href="#feirtagsession">.NET Micro</a></li>
+
+                            <li datarole="list-divider">Other (E130)</li>
+                            <li><a href="#normingtonsession">CQRS</a></li>
+                            <li><a href="#bocksession">.NET Complier/Rosylyn</a></li>
+                            <li><a href="#feldersession">WF4 and AppFabric</a></li>
+                            <li><a href="#gavinsession">Task Library</a></li>
+                        </ul>
+                    </div>
+                    <a href="#sessions" data-role="button">Sessions By Time</a>
+                 <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer" data-position="fixed"  >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div id="ptacekbio" data-role="page">
             <div data-role="header">
                 <div id="header1" class="headerbio">John Ptacek Bio</div>
@@ -177,28 +447,6 @@
             </div>
         </div>
 
-        <div id="bellerbio" data-role="page">
-            <div data-role="header">
-                <div id="Div3" class="headerbio">Ray Beller Bio</div>
-            </div>
-
-            <div data-role="content" class="contentDisplay">
-                <h1>Ray Beller, BrightStar Technology</h1>
-                Ray Beller is a Software Engineer with BrightStar Technology Group specializing in Object-Oriented Design and Analysis and has an extensive track record by way of architecting, developing, managing, and supporting complex information systems. He has a solid hands-on approach with an excellent track record of consistently delivering immediate and effective solutions.
-                <a href="#bellersession" data-role="button">Session: .NET Gadgeteer</a>
-            </div>
-            <div data-role="footer" data-position="fixed" >
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#speakers" >Speakers</a></li>
-                        <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
-                        <li><a href="#about">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
         <div id="bostbio" data-role="page">
             <div data-role="header">
                 <div id="Div2" class="headerbio">Dave Bost Bio</div>
@@ -221,6 +469,26 @@
             </div>
         </div> 
 
+        <div id="boydbio" data-role="page">
+            <div data-role="header">
+                <div id="Div36" class="headerbio">Eric BOyd Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Eric Boyd, responsiveX</h1>
+                <p>Eric D. Boyd is the Founder and CEO of responsiveX (<a href="www.responsiveX.com">www.responsiveX.com</a>)" and a Windows Azure MVP. Eric began his technology career by starting a web development firm in the 90’s and has served in multiple roles since including developer, consultant, business owner and technology executive. Today, he helps companies create great web, mobile and client experiences, often powered by cloud services. You can find Eric blogging at <a href="http://www.EricDBoyd.com">www.EricDBoyd.com</a> and on Twitter at <a href="http://twitter.com/EricDBoyd">http://twitter.com/EricDBoyd</a>.</p>
+                <a href="#boydsession" data-role="button">Session: Benefits of OData</a>
+            </div>
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
         <div id="candellbio" data-role="page">
             <div data-role="header">
                 <div id="Div4" class="headerbio">Brad Candell Bio</div>
@@ -484,6 +752,8 @@
                 <b>Time:</b>9:00 - 10:15<br/>
                 <p>Mobile applications are becoming more and more important to business and organizations. However, developing mobile applications is becoming more and more costly because the popularity of different mobile platforms means rewriting the application for each. Phonegap is a toolset that enables creating a single application that can be deployed as a native application to numerous mobile platforms like iOS, Android and Windows Phone 7. Come see how you can use Visual Studio and your HTML and Javascript skills to develop iOS, Android and WP7 apps!</p>
                 <a href="#ptacekbio" data-role="button">Speaker: John Ptacek</a>
+                <a id ="ptaceksessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
+
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -508,6 +778,7 @@
                 <b>Time:</b>10:30 - 11:45<br/>
                 <p>In this session, we will discuss the fundamentals of building Windows Phone apps including topics such as navigation, data storage, calling web services, utilizing built-in phone functionality as well as an overview of performance considerations for your apps</p>
                 <a href="#bostbio" data-role="button">Speaker: Dave Bost</a>
+                <a id ="bostsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -537,6 +808,7 @@
                 <p>Now there is SignalR, an asynchronous signaling library for ASP.NET that is a complete client and server-side solution.</p> 
                 <p>In this presentation you'll learn how you can use SignalR in your ASP.NET applications to create and manage long running asynchronouse calls that will help get one step closer to creating real-time applications.</p>
                 <a href="#candellbio" data-role="button">Speaker: Brad Candell</a>
+                <a id ="candellsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -561,6 +833,7 @@
                 <b>Time:</b>2:30-3:45<br/>
                 <p>It was a cold winters day in Chicago when a few guys, a case of beer and some JavaScript came together to do the unthinkable: open a garage door. Expecting something more? Let's talk about taking that same garage door to the cloud! A micro-controller, some JavaScript, a little node and the cloud is all you need to do some pretty epic stuff. Come find out how and why Clark did it.</p>
                 <a href="#sellbio" data-role="button">Speaker: Clark Sell</a>
+                <a id ="sellsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -587,6 +860,7 @@
                 <b>Time:</b>9:00 - 10:15<br/>
                 <p>Windows 8 App store is going to offer an unprecedented opportunity for developers. Leverage your existing Silverlight skills to get up and running quickly with Windows 8 application development. Tim will walk you through the technical conversion of a Silverlight line of business application to the new Windows 8 model using XAML and C#. This will include the hurdles and considerations with differences between WinRT and the Silverlight runtime as well as meeting the new Metro guidelines and optimizing for touch.</p>
                 <a href="#millerbio" data-role="button">Speaker: Tim Miller</a>
+                <a id ="millersessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -611,6 +885,7 @@
                 <b>Time:</b>10:30 - 11:15<br/>
                 <p>The Windows Azure Service Bus is an Internet Scale queueing and publish/subscribe system. It can be used by any platform that can send messages over HTTP. We will look at how the Service Bus Queues and Topics are actually architected, how you interact with these structures through UI and code, and using these items from other platforms like Node.js.</p>
                 <a href="#seelybio" data-role="button">Speaker: Scott Seely</a>
+                <a id ="seelysessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -635,6 +910,7 @@
                 <b>Time:</b>1:00 - 2:15<br/>
                 <p>With all the MVVM frameworks out there, it’s hard to know which one is best for you. In this session, we will look at one of the best MVVM frameworks out there: Caliburn.Micro. We will build an application from the ground up to show how to get started with Caliburn.Micro from the perspective that matters the most: the code.</p>
                 <a href="#edwardsbio" data-role="button">Speaker: Brent Edwards</a>
+                <a id ="edwardssessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -661,6 +937,7 @@
                 <p>Do you want to build native applications in JavaScript?  The HTML5/CSS/JavaScript stack shown at Build 2011 caused quite a ruckus within the .NET and Web Developer communities. </p>
                 <p>We won’t talk about Plugins vs. HTML5 too much, but we will take a hard look at how well WinJS delivers on the promises of re-using Web Developer skills for Windows 8 and making JavaScript a first class citizen in the Windows 8 ecosystem. Come to this session to explore common smart-client application techniques such as control/UI, navigation, data-binding, service consumption, and more.  XAML developers looking for a peek at the dark side are welcome</p>
                 <a href="#paynebio" data-role="button">Speaker: Damon Payne</a>
+                <a id ="paynesessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -683,9 +960,34 @@
                 <h1>Kinect Development</h1>
                 <b>Track:</b>Micro Framework/Kinect<br/>
                 <b>Location:</b>E157<br/>
-                <b>Time:</b>10:30-11:45<br/>
+                <b>Time:</b>9:00-10:15<br/>
                 <p>Kinect Development: A Follow Up to Hacking the Kinect. Last year’s presentation covered how to do things the hard way without Microsoft support. Now that the Kinect SDK, Kinect for Windows hardware and commercial support for non-XBOX 360 applications has been released, the full power of the Kinect is unleashed. Come see how to start developing with the Kinect, using its hardware features and what the Kinect SDK provides.</p>
                 <a href="#levenhagenbio" data-role="button">Speaker: Greg Levenhagen</a>
+                <a id ="levenhagensessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
+            </div>
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+                <div id="boydsession" data-role="page"> 
+            <div data-role="header">
+                <div id="Div40" class="headerbio">OData Benefits</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Consuming Data From Many Platforms - The Benefits of OData</h1>
+                <b>Track:</b>Micro Framework/Kinect<br/>
+                <b>Location:</b>E157<br/>
+                <b>Time:</b>10:30-11:45<br/>
+                <p>The amount of data stored today is growing at a rapid rate. However, data is only valuable if it is accessible and can be consumed by people and systems. OData is an open protocol for sharing data that is positioned to solve this problem. OData uses the standard HTTP protocol using REST principles to make data accessible and has huge industry momentum with rapid adoption growth. In this session, we will explore what OData is all about and how to expose relational and non-relational data as OData using WCF Data Services. We will then walkthrough developing apps to consume the OData feeds from multiple clients and platforms including mobile devices. Finally, we will take a look at how you can benefit from publishing your OData services to Windows Azure.</p>
+                <a href="#boydbio" data-role="button">Speaker: Eric Boyd</a>
+                <a id ="boydsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -710,6 +1012,7 @@
                 <b>Time:</b>1:00 - 2:15<br/>
                 <p>Here’s a talk that explains how the use of Microsoft Robotics Developer Studio (RDS) with microcontrollers enables greater control and flexibility. We’ll build a project to build a service which will allow RDS to talk with a Netduino. Visual Programming Language in RDS it makes it easy to consume these services for advanced projects.</p>
                 <a href="#maungbio" data-role="button">Speaker: Lwin and Min Maung</a>
+                <a id ="maungsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -734,6 +1037,7 @@
                 <b>Time:</b>2:30-3:45<br/>
                 <p>Here’s a talk that explains how the use of Microsoft Robotics Developer Studio (RDS) with microcontrollers enables greater control and flexibility. We’ll build a project to build a service which will allow RDS to talk with a Netduino. Visual Programming Language in RDS it makes it easy to consume these services for advanced projects.</p>
                 <a href="#feirtagbio" data-role="button">Speaker: Travis Feirtag</a>
+                <a id ="feirtagsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -771,6 +1075,7 @@
                     </ol>
                 </ol>
                 <a href="#normingtonbio" data-role="button">Speaker: Dan Normington</a>
+                <a id ="normingtonsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -795,6 +1100,7 @@
                 <b>Time:</b>10:30-11:45<br/>
                 <p>With the public release of Project Roslyn, Microsoft has finally let .NET developers get access to their long-awaited compiler APIs. The potential impact of having a compiler API available for all developers is immense. In this session, you'll get a tour of the elements behind this new API, such as syntax trees and engines, and how you can use them in code analysis and metaprogramming techniques.</p>
                 <a href="#bockbio" data-role="button">Speaker: Jason Bock</a>
+                <a id ="bocksessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -819,6 +1125,7 @@
                 <b>Time:</b>1:00 - 2:15<br/>
                 <p>Added to the framework in .NET 3.0 and completely re-written from the ground up in .NET 4.0, XAML based WF4 workflows provide the declarative framework for building application and service logic that gives developers a higher level language for handling asynchronous, parallel tasks and other complex processing.  In this presentation we’ll take a closer look at creating workflow services using Windows Workflow 4 to automate your business processes as scalable, long-running workflow services that then can be hosted and monitored with Windows Server AppFabric (formerly codename Dublin) along with standard WCF services</p>
                 <a href="#felderbio" data-role="button">Speaker: Scott Felder</a>
+                <a id ="feldersessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -843,6 +1150,7 @@
                 <b>Time:</b>2:30 - 3:45<br/>
                 <p>The Task Parallel Library [TPL], officially introduced in .NET 4.0, made parallel programming ‘fun’.  In .NET 4.5, Microsoft has again introduced some enhancements to make things easier, faster and to provide developers ‘yet another async tool’ to keep in your back pocket to amaze your customers.  In this presentation, we’ll take a look at building a simple, yet familiar game using ‘old school’ tasks and then see what the game might look like using the new TPL DataFlow and async/await keywords.</p>
                 <a href="#gavinbio" data-role="button">Speaker: Ben Gavin</a>
+                <a id ="gavinsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
@@ -913,6 +1221,7 @@
                 <p>The Fox Valley .NET User Group is proud to bring you it 5th day of .NET. This year we have more great speakers and great prizes!</p>
                 <p>This year's location is the Fox Valley Technical College, located at 1825 N. Bluemound Drive Appleton, WI 54912-2277</p>
             </div>
+            <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
                     <ul>
@@ -924,6 +1233,31 @@
                 </div>
             </div>
         </div>
+        
+
+        <div id="mysessions" data-role="page">
+            <div data-role="header">
+                <div id="Div41" class="headerbio">My Sessions</div>
+            </div>
+
+            <div data-role="content" class="contentDisplay">
+                <h1>My Sessions</h1>
+                <div id="mysessiondata" data-role="content"  >
+                </div>
+            </div><!-- /content -->
+            <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="#sessions">Sessions</a></li>
+                        <li><a href="#twitter" >Twitter</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
 
         <div id="twitter" data-role="page">
             <div data-role="header">
@@ -936,6 +1270,7 @@
                 <div id="twitList" data-role="contenet"  >
                 </div>
             </div><!-- /content -->
+           <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
             <div data-role="footer" data-position="fixed" >
                 <div data-role="navbar">
                     <ul>
