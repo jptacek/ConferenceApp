@@ -8,11 +8,11 @@
     
         <link rel="stylesheet" href="jquery.mobile-1.0.1.css"/>
         <link href="styles.css" rel="stylesheet" type="text/css"/>
-        <script src="jquery-1.7.1.js"></script>
-        <script src="jquery.mobile-1.0.1.js"></script>
+        <script type="text/javascript" src="jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.0.1.js"></script>
             
-        <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
-         <!-- <script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+         <!--<script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
 
         <script type="text/javascript">
             $(function () {
@@ -152,18 +152,18 @@
                     sessionHtml += '<li>9:00 - 10:15 ';
                     switch (firstSessionHtml) {
 
-                        case 'ptaceksession':
-                            sessionHtml += '<a href="#ptaceksession">Write Once Mobile Apps</a></li>';
-                            break;
-                        case 'millersession':
-                            sessionHtml += '<a href="#millersession">Convert SL to Win 8</a></li>';
-                            break;
-                        case 'levenhagensession':
-                            sessionHtml += '<a href="#levenhagensession">Kinect</a></li>';
-                            break;
-                        case 'normingtonsession':
-                            sessionHtml += '<a href="#normingtonsession">CQRS</a></li>';
-                            break;
+                    case 'ptaceksession':
+                        sessionHtml += '<a href="#ptaceksession">Write Once Mobile Apps</a></li>';
+                        break;
+                    case 'millersession':
+                        sessionHtml += '<a href="#millersession">Convert SL to Win 8</a></li>';
+                        break;
+                    case 'levenhagensession':
+                        sessionHtml += '<a href="#levenhagensession">Kinect</a></li>';
+                        break;
+                    case 'normingtonsession':
+                        sessionHtml += '<a href="#normingtonsession">CQRS</a></li>';
+                        break;
                     }
                 }
 
@@ -172,18 +172,18 @@
                     sessionHtml += '<li> 10:30 - 11:45 ';
                     switch (secondSessionHtml) {
 
-                        case 'bostsession':
-                            sessionHtml += '<a href="#bostsession">WP7 Development</a></li>';
-                            break;
-                        case 'seelysession':
-                            sessionHtml += '<a href="#seelysession">Azure Service Bus</a></li>';
-                            break;
-                        case 'boydsession':
-                            sessionHtml += '<a href="#boydsession">OData Benefits</a></li>';
-                            break;
-                        case 'bocksession':
-                            sessionHtml += '<a href="#bocksession">.NET Complier/Rosylyn</a></li>';
-                            break;
+                    case 'bostsession':
+                        sessionHtml += '<a href="#bostsession">WP7 Development</a></li>';
+                        break;
+                    case 'seelysession':
+                        sessionHtml += '<a href="#seelysession">Azure Service Bus</a></li>';
+                        break;
+                    case 'boydsession':
+                        sessionHtml += '<a href="#boydsession">OData Benefits</a></li>';
+                        break;
+                    case 'bocksession':
+                        sessionHtml += '<a href="#bocksession">.NET Complier/Rosylyn</a></li>';
+                        break;
                     }
                 }
 
@@ -194,18 +194,18 @@
                     sessionHtml += '<li>1:00 - 2:15 ';
                     switch (thirdSessionHtml) {
 
-                        case 'candellsession':
-                            sessionHtml += '<a href="#candellsession">SignalR</a></li>';
-                            break;
-                        case 'edwardssession':
-                            sessionHtml += '<a href="#edwardssession">MVVM</a></li>';
-                            break;
-                        case 'maungsession':
-                            sessionHtml += '<a href="#maungsession">Robotics Studio</a></li>';
-                            break;
-                        case 'feldersession':
-                            sessionHtml += '<a href="#feldersession">WF4 and AppFabric</a></li>';
-                            break;
+                    case 'candellsession':
+                        sessionHtml += '<a href="#candellsession">SignalR</a></li>';
+                        break;
+                    case 'edwardssession':
+                        sessionHtml += '<a href="#edwardssession">MVVM</a></li>';
+                        break;
+                    case 'maungsession':
+                        sessionHtml += '<a href="#maungsession">Robotics Studio</a></li>';
+                        break;
+                    case 'feldersession':
+                        sessionHtml += '<a href="#feldersession">WF4 and AppFabric</a></li>';
+                        break;
                     }
                 }
 
@@ -214,18 +214,18 @@
                     sessionHtml += '<li> 2:30 - 3:45 ';
                     switch (fourthSessionHtml) {
 
-                        case 'sellsession':
-                            sessionHtml += '<a href="#sellsession">Node.JS</a></li>';
-                            break;
-                        case 'paynesession':
-                            sessionHtml += '<a href="#paynesession">Javascript and Win 8</a></li>';
-                            break;
-                        case 'feirtagsession':
-                            sessionHtml += '<a href="#feirtagsession">.NET Micro</a></li>';
-                            break;
-                        case 'gavinsession':
-                            sessionHtml += '<a href="#gavinsession">Task Library</a></li>';
-                            break;
+                    case 'sellsession':
+                        sessionHtml += '<a href="#sellsession">Node.JS</a></li>';
+                        break;
+                    case 'paynesession':
+                        sessionHtml += '<a href="#paynesession">Javascript and Win 8</a></li>';
+                        break;
+                    case 'feirtagsession':
+                        sessionHtml += '<a href="#feirtagsession">.NET Micro</a></li>';
+                        break;
+                    case 'gavinsession':
+                        sessionHtml += '<a href="#gavinsession">Task Library</a></li>';
+                        break;
                     }
                 }
 
@@ -233,12 +233,23 @@
                 return sessionHtml;
             }
 
+
         </script>
+        
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function () {
+                $.mobile.autoInitializePage = false;
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.touchOverflowEnabled = false;
+                $.mobile.defaultDialogTransition = 'none';
+                $.mobile.loadingMessage = 'Daten werden geladen...';
+            });
+</script>
     </head>
 
     <body>
         <div id="home" data-role="page">
-                <div data-role="header">
+            <div data-role="header">
                 <div id="Div16" class="headerbio">2012 FVNUG Day of .NET</div>
             </div>
 
@@ -247,17 +258,17 @@
                 April 28, 2012<br/>
                 <a href="#speakers" data-role="button">Speakers</a>
                 <a href="#sessions" data-role="button">Sessions</a>
-                <a href="#twitter" data-role="button">Twitter Feed</a>
+                <a href="twitter.html" rel="external" data-role="button">Twitter Feed</a>
                 <a href="#about" data-role="button">About</a>                
                 <a class="mysessiontag" href="#mysessions" data-role="button">My Sessions</a>
             </div>
-                 <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
-            <div data-role="footer" data-position="fixed" >
+            <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer"  >
                 <div data-role="navbar" id="navBarHome">
                     <ul>
                         <li><a href="#speakers" class="ui-btn-active">Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -265,7 +276,7 @@
         </div>
 
         <div id="speakers" data-role="page">
-                <div data-role="header">
+            <div data-role="header">
                 <div id="Div17" class="headerbio">Speakers</div>
             </div>
 
@@ -289,13 +300,13 @@
                     <li><a href="#seelybio">Scott Seely</a></li>
                 </ul>
             </div>
-                 <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
-            <div data-role="footer" data-position="fixed"  >
+            <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer"  >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" class="ui-btn-active">Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -341,63 +352,63 @@
             <a href="#sessionsbytrack" data-role="button">Sessions By Track</a>
             <a class="mysessiontag"  href="#mysessions" data-role="button">My Sessions</a>
             <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
-            <div data-role="footer" data-position="fixed"  >
+            <div data-role="footer"  >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions" class="ui-btn-active">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         
-                        <div id="sessionsbytrack" data-role="page">
-                <div data-role="header">
+        <div id="sessionsbytrack" data-role="page">
+            <div data-role="header">
                 <div id="Div39" class="headerbio">Sessions By Time</div>
             </div>
 
-                    <div data-role="content" class="contentDisplay">
-                        <ul data-role="listview"  data-theme="c" data-dividertheme="d">
-                            <li datarole="list-divider">Web/Mobile (Commons)</li>
-                            <li><a href="#ptaceksession">Write Once Mobile Apps</a></li>
-                            <li><a href="#bostsession">WP7 Development</a></li>
-                            <li><a href="#candellsession">SignalR</a></li>
-                            <li><a href="#sellsession">Node.JS</a></li>
+            <div data-role="content" class="contentDisplay">
+                <ul data-role="listview"  data-theme="c" data-dividertheme="d">
+                    <li datarole="list-divider">Web/Mobile (Commons)</li>
+                    <li><a href="#ptaceksession">Write Once Mobile Apps</a></li>
+                    <li><a href="#bostsession">WP7 Development</a></li>
+                    <li><a href="#candellsession">SignalR</a></li>
+                    <li><a href="#sellsession">Node.JS</a></li>
 
 
-                            <li datarole="list-divider">Win8/Azure/Xaml (F180)</li>
-                            <li><a href="#millersession">Convert SL to Win 8</a></li>
-                            <li><a href="#seelysession">Azure Service Bus</a></li>
-                            <li><a href="#edwardssession">MVVM</a></li>
-                            <li><a href="#paynesession">Javascript and Win 8</a></li>
+                    <li datarole="list-divider">Win8/Azure/Xaml (F180)</li>
+                    <li><a href="#millersession">Convert SL to Win 8</a></li>
+                    <li><a href="#seelysession">Azure Service Bus</a></li>
+                    <li><a href="#edwardssession">MVVM</a></li>
+                    <li><a href="#paynesession">Javascript and Win 8</a></li>
 
 
-                            <li datarole="list-divider">Lunch (Commons)</li>
-                            <li><a href="#sellsession2">Content Before Chrome</a></li>
+                    <li datarole="list-divider">Lunch (Commons)</li>
+                    <li><a href="#sellsession2">Content Before Chrome</a></li>
 
-                            <li datarole="list-divider">MF/Kinect/Data (E157)</li>
-                            <li><a href="#levenhagensession">Kinect</a></li>
-                            <li><a href="#boydsession">OData Benefits</a></li>
-                            <li><a href="#maungsession">Robotics Studio</a></li>
-                            <li><a href="#feirtagsession">.NET Micro</a></li>
+                    <li datarole="list-divider">MF/Kinect/Data (E157)</li>
+                    <li><a href="#levenhagensession">Kinect</a></li>
+                    <li><a href="#boydsession">OData Benefits</a></li>
+                    <li><a href="#maungsession">Robotics Studio</a></li>
+                    <li><a href="#feirtagsession">.NET Micro</a></li>
 
-                            <li datarole="list-divider">Other (E130)</li>
-                            <li><a href="#normingtonsession">CQRS</a></li>
-                            <li><a href="#bocksession">.NET Complier/Rosylyn</a></li>
-                            <li><a href="#feldersession">WF4 and AppFabric</a></li>
-                            <li><a href="#gavinsession">Task Library</a></li>
-                        </ul>
-                    </div>
-                    <a href="#sessions" data-role="button">Sessions By Time</a>
-                 <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
-            <div data-role="footer" data-position="fixed"  >
+                    <li datarole="list-divider">Other (E130)</li>
+                    <li><a href="#normingtonsession">CQRS</a></li>
+                    <li><a href="#bocksession">.NET Complier/Rosylyn</a></li>
+                    <li><a href="#feldersession">WF4 and AppFabric</a></li>
+                    <li><a href="#gavinsession">Task Library</a></li>
+                </ul>
+            </div>
+            <a href="#sessions" data-role="button">Sessions By Time</a>
+            <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer"  >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -410,15 +421,15 @@
             <div data-role="content" class="contentDisplay">
                 <h1>John Ptacek, Skyline Technologies</h1>
                 <p>John is a Senior Engineer at Skyline Technologies, Inc. where his primary focus is the design, development and solutions for using SharePoint for clients around the globe. John has 
-                made presentations at .NET User Groups throughout the Midwest. John is a graduate of the University of Wisconsin - Madison in Nuclear Engineering.</p>
+                    made presentations at .NET User Groups throughout the Midwest. John is a graduate of the University of Wisconsin - Madison in Nuclear Engineering.</p>
                 <a href="#ptaceksession" data-role="button">Session: PhoneGap</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer"  >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -435,12 +446,12 @@
                 <p>Visit his web site at <a href="http://www.jasonbock.net">www.JasonBock.net</a>.</p>
                 <a href="#bocksession" data-role="button">Session: .NET Compiler</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -457,12 +468,12 @@
                 <p>Outside of his professional life, Dave enjoys discovering new music with his Zune Pass, defending the universe against 13-year olds on box Live, and playing golf (whenever his wife lets him). You can read Dave’s blog at <a href="http://davebost.com/blog">davebost.com/blog</a>or listen to the Thirsty Developer Podcast at <a hrfef="http://thirstydeveloper.com">thirstydeveloper.com</a>.</p>
                 <a href="#bostsession" data-role="button">Session: Windows Phone Dev</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -478,12 +489,12 @@
                 <p>Eric D. Boyd is the Founder and CEO of responsiveX (<a href="www.responsiveX.com">www.responsiveX.com</a>)" and a Windows Azure MVP. Eric began his technology career by starting a web development firm in the 90’s and has served in multiple roles since including developer, consultant, business owner and technology executive. Today, he helps companies create great web, mobile and client experiences, often powered by cloud services. You can find Eric blogging at <a href="http://www.EricDBoyd.com">www.EricDBoyd.com</a> and on Twitter at <a href="http://twitter.com/EricDBoyd">http://twitter.com/EricDBoyd</a>.</p>
                 <a href="#boydsession" data-role="button">Session: Benefits of OData</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -498,12 +509,12 @@
                 <p>Brad Candell is an application and web architect with IDEXX Laboratories in Eau Claire, WI. Brad has been developing software and web applications within the Microsoft Ecosystem over the past 15 years, now focusing primarily in C#, ASP.NET MVC, WPF, WCF, Windows Phone 7, Silverlight, and MEF. When not immersed in code, Brad enjoys spending time with his wife and three children, camping, restoring antiques, or making sawdust in his woodworking shop.</p>
                 <a href="#candellsession" data-role="button">Session: SignalR</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer"  >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -519,12 +530,12 @@
                 <p>Brent Edwards is a Senior Consultant for Magenic, a Microsoft Gold Partner consulting company. He is an accomplished software developer, architect, mentor and speaker with over 7 years of experience in developing innovative solutions with Microsoft technologies. Brent has worked on projects ranging from ASP.NET MVC with C# and jQuery to WPF with VB.NET. He is also the author of MVVM Fabric (<a href="http://mvvmfabric.com/">mvvmfabric.com</a>), a free MVVM framework for WPF. In his spare time, Brent develops applications for the Android platform. His apps have over two million downloads and he was selected by Google as a Top Android Developer for their Device Seeding Program. When not cranking out code, you can find him hanging out with his wife and four kids or riding his wakeboard, snowboard or mountain bike. Check out his blog at <a href="http://brentedwards.net">brentedwards.net</a>.</p>
                 <a href="#edwardssession" data-role="button">Session: MVVC with Caliburn</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -539,12 +550,12 @@
                 <p>Travis is a robotic experiment made from defective parts that went terribly wrong.  His positronic brain constantly fails unit tests.  He is a mystery wrapped in an enigma sautéed in a conundrum from a parallel universe.  Unbelievably a female human was coerced into marrying him and allowed him to reproduce.  He spends his free time building evil technology projects and raising four children to follow in his mad scientist ways.  If you choose to follow him on twitter, his evil ramblings can be found at @therobotgeek  The warranty has definitely expired.</p>
                 <a href="#feirtagsession" data-role="button">Session: .NET Micro Framework</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -559,12 +570,12 @@
                 <p>Scott is a Technology Manager at J. J. Keller & Associates, Inc., a transportation safety and regulatory risk management company.  He has been designing and developing software systems for over 15 years on diverse platforms and technologies in a wide variety of industries.  His current interests include cloud computing, event-driven architecture, SOA, distributed computing and embedded internet devices.  Scott has served on the Fox Valley .NET User’s Group board for the past five years and has been President for the past year.  Scott is also a veteran of the U.S. Navy.</p>
                 <a href="#feldersession" data-role="button">Session: WF4 and AppFabric</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -580,12 +591,12 @@
                 <p>Ben can be reached through his blog at <a href="http://blog.virtual-olympus.com/">blog.virtual-olympus.com</a> or on Twitter @virtualolympus</p>
                 <a href="#gavinsession" data-role="button">Session: Task Library</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -602,12 +613,12 @@
                 <p>You can find Greg at <a href="http://devtreats.com">devtreats.com</a> and @GregLevenhagen</p>
                 <a href="#levenhagensession" data-role="button">Session: Kinect Dev</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -623,12 +634,12 @@
                 <p>In his "spare" time, Min Maung is a skilled, cross-platform mobile developer, aggressive hackathon competitor and presenter. Enamored with the Window Phone UI, Min co-created the first Metro UI launcher for Android, featured on Engadget. He's soon to publish ""Accolade Navigator,"" a turn-by-turn, visually compelling GPS navigation system for the Windows Phone 7. When he's not coding, he's building robots. Monday through Friday, you'll find Min at a leading, privately-held payroll and HR sofware solutions company, cranking out .Net code and writing apps in ASP.Net, Silverlight, and other .Net solutions.</p>
                 <a href="#muangsession" data-role="button">Session: Robotics Studio</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -643,12 +654,12 @@
                 <p>Tim is a Senior Software Engineer at Skyline Technologies, Inc. with over 15 years of experience developing windows, web and mobile based applications with Microsoft development platforms. Tim has spent the last 4 years focused on creating richer applications with Silverlight and HTML5 technologies. Tim is a former president and regular presenter for the Fox Valley .Net User Group.</p>
                 <a href="#millersession" data-role="button">Session: Convert Silverlight to Win 8</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -664,12 +675,12 @@
                 <p>Dan has lead several projects over the last three years where DDD was implemented. Over this three year period the patterns used to interact with the domain has evolved. He would like to share this evolution with you in hopes that you will gain from his experiences.</p>
                 <a href="#normingtonsession" data-role="button">Session: CQRS and Event Sourcing</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -685,12 +696,12 @@
                 <p>Damon is currently a Principal at emerging technologies firm Hand Waver and a Senior Engineer at Big Hammer Data.  You can find steady updates and detailed articles at <a href="www.damonpayne.com">www.damonpayne.com</a>.
                 <a href="#paynesession" data-role="button">Session: Win 8 and Javascript</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -705,12 +716,12 @@
                 <p>Scott Seely is the president of Friseton, LLC (<a href="www.friseton.com">www.friseton.com</a>). He is also a Microsoft Regional Director in Chicago where he helps lead the Lake County .NET Users’ Group, organize Code Camps, and speak at user groups throughout the region. His community involvement has earned him a Microsoft MVP Award for Connected Systems. He has been developing for Windows Azure since early 2010.</p>
                 <a href="#seelysession" data-role="button">Session: Azure Service Bus</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -726,12 +737,12 @@
                 <p>Clark is a web evangelist for Microsoft based in Illinois. A Chicago native who can’t spell, Clark as a kid actually made his money building cars, getting grease under his nails. That art of building would later lead him to software development where he drinks the Web Development Kool-Aid. Writing code is what keeps Clark awake at night, while continually working on his craft and rapping with others over a few cold CORS. You can hear Clark muse about software on his podcast Developer Smackdown, or find his family cruising around in a 1968 Camaro SS.</p>
                 <a href="#sellsession" data-role="button">Session: Node.js</a><a href="#sellsession2" data-role="button">Session: Metro (Lunch)</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -755,12 +766,12 @@
                 <a id ="ptaceksessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
 
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -780,12 +791,12 @@
                 <a href="#bostbio" data-role="button">Speaker: Dave Bost</a>
                 <a id ="bostsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -810,12 +821,12 @@
                 <a href="#candellbio" data-role="button">Speaker: Brad Candell</a>
                 <a id ="candellsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -835,12 +846,12 @@
                 <a href="#sellbio" data-role="button">Speaker: Clark Sell</a>
                 <a id ="sellsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -862,12 +873,12 @@
                 <a href="#millerbio" data-role="button">Speaker: Tim Miller</a>
                 <a id ="millersessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -887,12 +898,12 @@
                 <a href="#seelybio" data-role="button">Speaker: Scott Seely</a>
                 <a id ="seelysessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -912,12 +923,12 @@
                 <a href="#edwardsbio" data-role="button">Speaker: Brent Edwards</a>
                 <a id ="edwardssessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -939,12 +950,12 @@
                 <a href="#paynebio" data-role="button">Speaker: Damon Payne</a>
                 <a id ="paynesessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -965,18 +976,18 @@
                 <a href="#levenhagenbio" data-role="button">Speaker: Greg Levenhagen</a>
                 <a id ="levenhagensessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
             </div>
         </div> 
-                <div id="boydsession" data-role="page"> 
+        <div id="boydsession" data-role="page"> 
             <div data-role="header">
                 <div id="Div40" class="headerbio">OData Benefits</div>
             </div>
@@ -989,12 +1000,12 @@
                 <a href="#boydbio" data-role="button">Speaker: Eric Boyd</a>
                 <a id ="boydsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1014,12 +1025,12 @@
                 <a href="#maungbio" data-role="button">Speaker: Lwin and Min Maung</a>
                 <a id ="maungsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1039,12 +1050,12 @@
                 <a href="#feirtagbio" data-role="button">Speaker: Travis Feirtag</a>
                 <a id ="feirtagsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1066,23 +1077,23 @@
                     <li>Overview of CQRS</li>
                     <li>Create a demo application</li>
                     <ol>
-                      <li>Creating an event store</li>
-                      <li>Model a simple domain</li>
-                      <li>Writing events</li>
-                      <li>Hydrating aggregate roots from the event store</li>
-                      <li>Writing event handlers to react to state changes</li>
-                      <li>Patterns for handling these changes in the UI</li>
+                        <li>Creating an event store</li>
+                        <li>Model a simple domain</li>
+                        <li>Writing events</li>
+                        <li>Hydrating aggregate roots from the event store</li>
+                        <li>Writing event handlers to react to state changes</li>
+                        <li>Patterns for handling these changes in the UI</li>
                     </ol>
                 </ol>
                 <a href="#normingtonbio" data-role="button">Speaker: Dan Normington</a>
                 <a id ="normingtonsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1102,12 +1113,12 @@
                 <a href="#bockbio" data-role="button">Speaker: Jason Bock</a>
                 <a id ="bocksessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1127,12 +1138,12 @@
                 <a href="#felderbio" data-role="button">Speaker: Scott Felder</a>
                 <a id ="feldersessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1152,12 +1163,12 @@
                 <a href="#gavinbio" data-role="button">Speaker: Ben Gavin</a>
                 <a id ="gavinsessionsave" class="sessionsave" href="#" data-role="button">Attend Session</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1165,7 +1176,7 @@
         </div>
         
         
-                <div id="sellsession2" data-role="page">
+        <div id="sellsession2" data-role="page">
             <div data-role="header">
                 <div id="Div33" class="headerbio">Content before chrome</div>
             </div>
@@ -1175,17 +1186,17 @@
                 <b>Location:</b>Commons<br/>
                 <b>Time:</b>11:45 - 1:00<br/>
                 <p>Do you think Windows 8 is last to the party or do you think Microsoft just completely revolutionized the user experience for computing? Have you tried it, or do you think I am just talking smack?</p>
-                 <p>In the session, Clark drops the IDE and gets square with Metro. A new generation of computing is here and it starts with Metro. Yes we have new libraries and development tools but have you really thought about the bigger picture? Negative Space, Chrome, Tiles, Touch, Gestures, Semantic Zoom, Gutters, Animations, Notifications…  Have you really thought about what Metro is and what it means to your business?</p>
+                <p>In the session, Clark drops the IDE and gets square with Metro. A new generation of computing is here and it starts with Metro. Yes we have new libraries and development tools but have you really thought about the bigger picture? Negative Space, Chrome, Tiles, Touch, Gestures, Semantic Zoom, Gutters, Animations, Notifications…  Have you really thought about what Metro is and what it means to your business?</p>
                 <p>It’s time to clear your mind and start looking at what Metro really means. It’s more than some square corners and bouncing tiles. We will talk about Metro and its place in the Windows ecosystem. We will remove the chrome while looking at the different design aspects of great Metro apps. You want to make some coin right? Metro is here, but are you embracing its potential?</p> 
                 <p>Don’t be the next battleship black.</p> 
                 <a href="#sellbio" data-role="button">Speaker: Clark Sell</a>
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1200,12 +1211,12 @@
                 <h1>Fox Valley .NET User Group 2012 Day of .NET</h1>
                 <p>The Fox Valley .NET User Group is proud to bring you it 5th day of .NET. This year we have more greawt speakers and greawt prizes!
             </div>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1222,12 +1233,12 @@
                 <p>This year's location is the Fox Valley Technical College, located at 1825 N. Bluemound Drive Appleton, WI 54912-2277</p>
             </div>
             <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about" class="ui-btn-active">About</a></li>
                     </ul>
                 </div>
@@ -1246,12 +1257,12 @@
                 </div>
             </div><!-- /content -->
             <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
-            <div data-role="footer" data-position="fixed" >
+            <div data-role="footer" >
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#speakers" >Speakers</a></li>
                         <li><a href="#sessions">Sessions</a></li>
-                        <li><a href="#twitter" >Twitter</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -1259,35 +1270,11 @@
         </div>
 
 
-        <div id="twitter" data-role="page">
-            <div data-role="header">
-                <div id="Div38" class="headerbio">Day of .NET - Twitter Feed</div>
-            </div>
-
-            <div data-role="content" class="contentDisplay">
-                <h1>Twitter Feed</h1>
-                <p>Twitter hashtag: #FVDODN</p>
-                <div id="twitList" data-role="contenet"  >
-                </div>
-            </div><!-- /content -->
-           <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
-            <div data-role="footer" data-position="fixed" >
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="index.html#speakers" >Speakers</a></li>
-                        <li><a href="index.html#sessions">Sessions</a></li>
-                        <li><a href="#twitter"  class="ui-btn-active">Twitter</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
     </body>
-<!--
+    <!--
     <script type="text/javascript">
         StopGap();
-    </script> 
-    -->
+    </script> -->
 </html>
 
