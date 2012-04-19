@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+        <title>WP7</title>
+    
+        <link rel="stylesheet" href="jquery.mobile-1.0.1.css"/>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.0.1.js"></script>
+            
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+         <!--<script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
+
+        <script type="text/javascript">
+            $(function () {
+                console.log("binding attempt");
+                $.ajax({
+                    url: "http://search.twitter.com/search.json?q=%20%23FVDODN",
+                    dataType: 'jsonp',
+                    success: function (json_results) {
+                        console.log(json_results);
+                        $.each(json_results.results, function (key) {
+                            $('#twitList').append('<h3"><a href="http://twitter.com/' + json_results.results[key].from_user + '">' +
+                                '<img src="' + json_results.results[key].profile_image_url + '"/>' + json_results.results[key].from_user + '</h3></a>' +
+                                '<p>' + json_results.results[key].text + '</p>'
+                            );
+
+                        });
+                        // Need to refresh list after AJAX call
+                        $('#twitList').refresh();
+                    }
+                });
+            })
+
+        </script>
+        
+        <script type="text/javascript">
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // once the device ready event fires, you can safely do your thing! -jm
+            function onDeviceReady() {
+                console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+
+            }
+
+        </script>
+        
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function () {
+                $.mobile.autoInitializePage = false;
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.touchOverflowEnabled = false;
+                $.mobile.defaultDialogTransition = 'none';
+                $.mobile.loadingMessage = 'Daten werden geladen...';
+            });
+</script>
+    </head>
+
+    <body>
+
+        <div id="twitter" data-role="page">
+            <div data-role="header">
+                <div id="Div38" class="headerbio">Day of .NET - Twitter Feed</div>
+            </div>
+
+            <div data-role="content" class="contentDisplay">
+                <h1>Twitter Feed</h1>
+                <p>Twitter hashtag: #FVDODN</p>
+                <div id="twitList" data-role="contenet"  >
+                </div>
+            </div><!-- /content -->
+            <p align="center" style="background-color:white"><img src="images/design_by_logo.png" width="148" height="78"></p>
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html#speakers" rel="external" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external" >Sessions</a></li>
+                        <li><a href="#twitter"  class="ui-btn-active">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external" >About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <!--
+    <script type="text/javascript">
+        StopGap();
+    </script> -->
+</html>
+
