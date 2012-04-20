@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+        <title>WP7</title>
+    
+        <link rel="stylesheet" href="jquery.mobile-1.0.1.css"/>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.0.1.js"></script>
+            
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+         <!--<script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
+        
+        <script type="text/javascript">
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // once the device ready event fires, you can safely do your thing! -jm
+            function onDeviceReady() {
+                console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+
+            }
+
+        </script>
+        
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function () {
+                $.mobile.autoInitializePage = false;
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.touchOverflowEnabled = false;
+                $.mobile.defaultDialogTransition = 'none';
+                $.mobile.loadingMessage = 'Daten werden geladen...';
+            });
+</script>
+    </head>
+
+    <body>
+
+        <div id="speakers" data-role="page">
+            <div data-role="header">
+                <div id="Div17" class="headerbio">Speakers</div>
+            </div>
+
+            <div data-role="content" class="contentDisplay">
+                <ul data-role="listview"  data-inset="true" data-filter="true">
+                    <li><a href="#ptacekbio">John Ptacek, Skyline Technologies</a></li>
+                    <li><a href="#bockbio">Jason Bock, Magenic</a></li>
+                    <li><a href="#bostbio">Dave Bost, Microsoft</a></li>
+                    <li><a href="#boydbio">Eric Boyd, responsiveX</a></li>
+                    <li><a href="#candellbio">Brad Candell, IDEXX Labs</a></li>
+                    <li><a href="#edwardsbio">Brent Edwards, Magenic</a></li>
+                    <li><a href="#feirtagbio">Travis Feirtag</a></li>
+                    <li><a href="#felderbio">Scott Felder, J.J. Keller</a></li>
+                    <li><a href="#gavinbio">Ben Gavin, Skyline Technologies</a></li>
+                    <li><a href="#levenhagenbio">Greg Levenhagen, Skyline Technologies</a></li>
+                    <li><a href="#maungbio">Lwin and Min Maung</a></li>
+                    <li><a href="#millerbio">Tim Miller, Skyline Technologies</a></li>
+                    <li><a href="#normingtonbio">Dan Normington, J.J. Keller</a></li>
+                    <li><a href="#paynebio">Damon Payne, BigHammer Data</a></li>
+                    <li><a href="#sellbio">Clark Sell, Microsoft</a></li>
+                    <li><a href="#seelybio">Scott Seely</a></li>
+                </ul>
+            </div>
+            <img src="images/design_by_logo.png" width="148" height="78">
+            <div data-role="footer"  >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" class="ui-btn-active">Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="ptacekbio" data-role="page">
+            <div data-role="header">
+                <div id="header1" class="headerbio">John Ptacek Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>John Ptacek, Skyline Technologies</h1>
+                <p>John is a Senior Engineer at Skyline Technologies, Inc. where his primary focus is the design, development and solutions for using SharePoint for clients around the globe. John has 
+                    made presentations at .NET User Groups throughout the Midwest. John is a graduate of the University of Wisconsin - Madison in Nuclear Engineering.</p>
+                <a href="index.html#ptaceksession"  rel="external" data-role="button">Session: PhoneGap</a>
+            </div>
+            <div data-role="footer"  >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="speakers.html" rel="external" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="bockbio" data-role="page">
+            <div data-role="header">
+                <div id="Div1" class="headerbio">Jason Bock Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Jason Bock, Magenic</h1>
+                <p>Jason Bock is a Principal Consultant for Magenic (<a href="http://www.magenic.com">http://www.magenic.com</a>) and a Microsoft MVP (C#). He has worked on a number of business applications using a diverse set of substrates and languages such as C#, .NET, and Java. He is the author of "Applied .NET Attributes", "CIL Programming: Under the Hood of .NET", and the forthcoming "Metaprogramming in .NET". He has written numerous articles on software development issues and has presented at a number of conferences and user groups. He is a leader of the Twin Cities Code Camp (http://www.twincitiescodecamp.com). Jason holds a Master's degree in Electrical Engineering from Marquette University.</p>
+                <p>Visit his web site at <a href="http://www.jasonbock.net">www.JasonBock.net</a>.</p>
+                <a href="index.html#bocksession" rel="external" data-role="button">Session: .NET Compiler</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="bostbio" data-role="page">
+            <div data-role="header">
+                <div id="Div2" class="headerbio">Dave Bost Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Dave Bost, Microsoft</h1>
+                <p>Dave Bost is a Developer Evangelist with Microsoft and co-host of the Thirsty Developer Podcast. Dave has been a Software Developer and Solution Architect for over 15-years. Prior to joining Microsoft, Dave cut his technical teeth working with many Fortune-500 companies as a technical mentor and consultant.</p>
+                <p>Outside of his professional life, Dave enjoys discovering new music with his Zune Pass, defending the universe against 13-year olds on box Live, and playing golf (whenever his wife lets him). You can read Dave’s blog at <a href="http://davebost.com/blog">davebost.com/blog</a>or listen to the Thirsty Developer Podcast at <a hrfef="http://thirstydeveloper.com">thirstydeveloper.com</a>.</p>
+                <a href="index.html#bostsession" rel="external"  data-role="button">Session: Windows Phone Dev</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+
+        <div id="boydbio" data-role="page">
+            <div data-role="header">
+                <div id="Div36" class="headerbio">Eric BOyd Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Eric Boyd, responsiveX</h1>
+                <p>Eric D. Boyd is the Founder and CEO of responsiveX (<a href="www.responsiveX.com">www.responsiveX.com</a>)" and a Windows Azure MVP. Eric began his technology career by starting a web development firm in the 90’s and has served in multiple roles since including developer, consultant, business owner and technology executive. Today, he helps companies create great web, mobile and client experiences, often powered by cloud services. You can find Eric blogging at <a href="http://www.EricDBoyd.com">www.EricDBoyd.com</a> and on Twitter at <a href="http://twitter.com/EricDBoyd">http://twitter.com/EricDBoyd</a>.</p>
+                <a href="index.html#boydsession"  rel="external" data-role="button">Session: Benefits of OData</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="candellbio" data-role="page">
+            <div data-role="header">
+                <div id="Div4" class="headerbio">Brad Candell Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Brad Candell, IDEXX Laboratories</h1>
+                <p>Brad Candell is an application and web architect with IDEXX Laboratories in Eau Claire, WI. Brad has been developing software and web applications within the Microsoft Ecosystem over the past 15 years, now focusing primarily in C#, ASP.NET MVC, WPF, WCF, Windows Phone 7, Silverlight, and MEF. When not immersed in code, Brad enjoys spending time with his wife and three children, camping, restoring antiques, or making sawdust in his woodworking shop.</p>
+                <a href="index.html#candellsession"  rel="external" data-role="button">Session: SignalR</a>
+            </div>
+            <div data-role="footer"  >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+
+        <div id="edwardsbio" data-role="page">
+            <div data-role="header">
+                <div id="Div5" class="headerbio">Brent Edwards Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Brent Edwards, Magenic</h1>
+                <p>Brent Edwards is a Senior Consultant for Magenic, a Microsoft Gold Partner consulting company. He is an accomplished software developer, architect, mentor and speaker with over 7 years of experience in developing innovative solutions with Microsoft technologies. Brent has worked on projects ranging from ASP.NET MVC with C# and jQuery to WPF with VB.NET. He is also the author of MVVM Fabric (<a href="http://mvvmfabric.com/">mvvmfabric.com</a>), a free MVVM framework for WPF. In his spare time, Brent develops applications for the Android platform. His apps have over two million downloads and he was selected by Google as a Top Android Developer for their Device Seeding Program. When not cranking out code, you can find him hanging out with his wife and four kids or riding his wakeboard, snowboard or mountain bike. Check out his blog at <a href="http://brentedwards.net">brentedwards.net</a>.</p>
+                <a href="index.html#edwardssession"  rel="external" data-role="button">Session: MVVC with Caliburn</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="feirtagbio" data-role="page">
+            <div data-role="header">
+                <div id="Div6" class="headerbio">Travis Feirtag Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Travis Feirtag</h1>
+                <p>Travis is a robotic experiment made from defective parts that went terribly wrong.  His positronic brain constantly fails unit tests.  He is a mystery wrapped in an enigma sautéed in a conundrum from a parallel universe.  Unbelievably a female human was coerced into marrying him and allowed him to reproduce.  He spends his free time building evil technology projects and raising four children to follow in his mad scientist ways.  If you choose to follow him on twitter, his evil ramblings can be found at @therobotgeek  The warranty has definitely expired.</p>
+                <a href="index.html#feirtagsession"  rel="external" data-role="button">Session: .NET Micro Framework</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="felderbio" data-role="page">
+            <div data-role="header">
+                <div id="Div7" class="headerbio">Scott Felder Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Scott Felder, J.J. Keller</h1>
+                <p>Scott is a Technology Manager at J. J. Keller & Associates, Inc., a transportation safety and regulatory risk management company.  He has been designing and developing software systems for over 15 years on diverse platforms and technologies in a wide variety of industries.  His current interests include cloud computing, event-driven architecture, SOA, distributed computing and embedded internet devices.  Scott has served on the Fox Valley .NET User’s Group board for the past five years and has been President for the past year.  Scott is also a veteran of the U.S. Navy.</p>
+                <a href="index.html#feldersession" rel="external"  data-role="button">Session: WF4 and AppFabric</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="gavinbio" data-role="page">
+            <div data-role="header">
+                <div id="Div8" class="headerbio">Ben Gavin Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Ben Gavin, Skyline Technologies</h1>
+                <p>Ben Gavin has been developing applications and websites for the last 15 years, and enjoys finding creative solutions to business challenges for his clients.  Ben is a Senior Software Engineer at Skyline Technologies, is a member of the Madison .NET User Group and occasional blogger on Silverlight, WPF and WCF topics.  His current technology interests include exploring Windows Phone and Metro style development and ASP.NET MVC.  Outside of work he enjoys spending time with his family exploring the Madison area bike trails, gaming and playing cards.</p>
+                <p>Ben can be reached through his blog at <a href="http://blog.virtual-olympus.com/">blog.virtual-olympus.com</a> or on Twitter @virtualolympus</p>
+                <a href="index.html#gavinsession"  rel="external" data-role="button">Session: Task Library</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="levenhagenbio" data-role="page">
+            <div data-role="header">
+                <div id="Div9" class="headerbio">Greg Levenhagen Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Greg Levenhagen, Skyline Technologies</h1>
+                <p>Greg Levenhagen has been designing and developing enterprise solutions, leading projects for a variety of businesses for over 10 years and has worked on a diverse set of platforms using many different tools. He is a true enthusiast of computer science, with passions and interests including mobile, cloud, architecture, parallel, testing, agile, ALM, UX, 3D/games, languages and much more. Greg is a Senior Software Engineer with Skyline Technologies, Board member of the Fox Valley .NET User's Group, cofounder of the Northeast WI Agile User’s Group, INETA speaker, IEEE member, ACM member, substitute professor and a PhD student.</p>
+                <p>Along with being a life-long geek, Greg enjoys golfing, football, woodworking, philosophy and stimulating conversation</p>
+                <p>You can find Greg at <a href="http://devtreats.com">devtreats.com</a> and @GregLevenhagen</p>
+                <a href="index.html#levenhagensession"  rel="external" data-role="button">Session: Kinect Dev</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="maungbio" data-role="page">
+            <div data-role="header">
+                <div id="Div10" class="headerbio">Lwin & Min Maung Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Lwin & Min Maung</h1>
+                <p>Lwin Maung is a developer and principal at Accolade Systems, a Chicagoland IT consulting startup. He is a developer of mobile applications. He also secures servers, enable VOIP and SIP solutions, and designs networks for small businesses. In his free time, Lwin plays with microcontrollers. Lwin teamed up with his brother, Min, to win several hackathons. Together, they've developed multiple cross-platform mobile apps.</p>
+                <p>In his "spare" time, Min Maung is a skilled, cross-platform mobile developer, aggressive hackathon competitor and presenter. Enamored with the Window Phone UI, Min co-created the first Metro UI launcher for Android, featured on Engadget. He's soon to publish ""Accolade Navigator,"" a turn-by-turn, visually compelling GPS navigation system for the Windows Phone 7. When he's not coding, he's building robots. Monday through Friday, you'll find Min at a leading, privately-held payroll and HR sofware solutions company, cranking out .Net code and writing apps in ASP.Net, Silverlight, and other .Net solutions.</p>
+                <a href="index.html#maungsession"  rel="external" data-role="button">Session: Robotics Studio</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="millerbio" data-role="page">
+            <div data-role="header">
+                <div id="Div11" class="headerbio">Tim Miller Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Tim Miller, Skyline Technologies</h1>
+                <p>Tim is a Senior Software Engineer at Skyline Technologies, Inc. with over 15 years of experience developing windows, web and mobile based applications with Microsoft development platforms. Tim has spent the last 4 years focused on creating richer applications with Silverlight and HTML5 technologies. Tim is a former president and regular presenter for the Fox Valley .Net User Group.</p>
+                <a href="index.html#millersession"  rel="external"  data-role="button">Session: Convert Silverlight to Win 8</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="normingtonbio" data-role="page">
+            <div data-role="header">
+                <div id="Div12" class="headerbio">Dan Normington Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Dan Normington, J.J. Keller</h1>
+                <p>Dan is a Software Architect at J. J. Keller & Associates, Inc. He has over 10 years of software development experience and has worked with technologies such as ASP.Net, MVC, Silverlight, and WCF.</p>
+                <p>Dan has lead several projects over the last three years where DDD was implemented. Over this three year period the patterns used to interact with the domain has evolved. He would like to share this evolution with you in hopes that you will gain from his experiences.</p>
+                <a href="index.html#normingtonsession"  rel="external" data-role="button">Session: CQRS and Event Sourcing</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="paynebio" data-role="page">
+            <div data-role="header">
+                <div id="Div13" class="headerbio">Damon Payne Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Damon Payne, BigHammer Data, a division of Edgenet, Inc</h1>
+                <p>Damon Payne is a life-long geek, Microsoft MVP, father, husband, audio/video nut, atheist, philosopher, wine drinker, and short order cook who lives in the unexplored swamps near Milwaukee.   Damon works mostly in the areas of Smart Client software (including Silverlight, mobile devices, and WPF) , visual tools,  and Solution Architecture; he also does web programming and has professional interests in parallel programming, agile processes, and requirements gathering.</p>
+                <p>Damon is currently a Principal at emerging technologies firm Hand Waver and a Senior Engineer at Big Hammer Data.  You can find steady updates and detailed articles at <a href="www.damonpayne.com">www.damonpayne.com</a>.
+                <a href="index.html#paynesession"  rel="external" data-role="button">Session: Win 8 and Javascript</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div id="seelybio" data-role="page">
+            <div data-role="header">
+                <div id="Div14" class="headerbio">Scott Seely Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Scott Seely, Friseton, LLC</h1>
+                <p>Scott Seely is the president of Friseton, LLC (<a href="www.friseton.com">www.friseton.com</a>). He is also a Microsoft Regional Director in Chicago where he helps lead the Lake County .NET Users’ Group, organize Code Camps, and speak at user groups throughout the region. His community involvement has earned him a Microsoft MVP Award for Connected Systems. He has been developing for Windows Azure since early 2010.</p>
+                <a href="index.html#seelysession"  rel="external" data-role="button">Session: Azure Service Bus</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+
+        <div id="sellbio" data-role="page">
+            <div data-role="header">
+                <div id="Div15" class="headerbio">Clark Sell Bio</div>
+            </div>
+            <div data-role="content" class="contentDisplay">
+                <h1>Clark Sell, Microsoft</h1>
+                <p>Clark is a web evangelist for Microsoft based in Illinois. A Chicago native who can’t spell, Clark as a kid actually made his money building cars, getting grease under his nails. That art of building would later lead him to software development where he drinks the Web Development Kool-Aid. Writing code is what keeps Clark awake at night, while continually working on his craft and rapping with others over a few cold CORS. You can hear Clark muse about software on his podcast Developer Smackdown, or find his family cruising around in a 1968 Camaro SS.</p>
+                <a href="index.html#sellsession"  rel="external" data-role="button">Session: Node.js</a><a href="index.html#sellsession2"  rel="external" data-role="button">Session: Metro (Lunch)</a>
+            </div>
+            <div data-role="footer" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#speakers" >Speakers</a></li>
+                        <li><a href="index.html#sessions" rel="external">Sessions</a></li>
+                        <li><a href="twitter.html" rel="external">Twitter</a></li>
+                        <li><a href="index.html#about" rel="external">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+
+
+
+    </body>
+    <!--
+    <script type="text/javascript">
+        StopGap();
+    </script> -->
+</html>
+
