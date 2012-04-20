@@ -56,7 +56,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
-    <Reference Include="WP7CordovaClassLib, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WP7CordovaClassLib, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CordovaSourceDictionary.xml" />
+    <Content Include="www\cordova-1.6.0.js" />
     <Content Include="www\images\ajax-loader.png" />
     <Content Include="www\images\design_by_logo.png" />
     <Content Include="www\images\header-background.png" />
@@ -86,7 +87,6 @@
     <Content Include="www\images\icons-18-white.png" />
     <Content Include="www\images\icons-36-black.png" />
     <Content Include="www\images\icons-36-white.png" />
-    <Content Include="www\mysessions.html" />
     <Content Include="www\styles.css" />
     <Content Include="www\jquery-1.7.1.js" />
     <Content Include="www\jquery-1.7.2.js" />
@@ -94,9 +94,9 @@
     <Content Include="www\jquery.mobile-1.0.1.js" />
     <Content Include="www\jquery.mobile.structure-1.0.1.css" />
     <Content Include="www\stopGap.js" />
+    <Content Include="www\twitter.html" />
     <None Include="BuildManifestProcessor.js" />
     <Content Include="GapLib\WP7CordovaClassLib.dll" />
-    <Content Include="www\cordova-1.5.0.js" />
     <Content Include="www\index.html">
       <SubType>Designer</SubType>
     </Content>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This file is auto-generated, do not edit! -jm -->
 <CordovaSourceDictionary>
-    <FilePath Value="www\cordova-1.5.0.js"/>
+    <FilePath Value="www\cordova-1.6.0.js"/>
     <FilePath Value="www\index.html"/>
     <FilePath Value="www\jquery-1.7.1.js"/>
     <FilePath Value="www\jquery-1.7.2.js"/>
@@ -9,12 +9,11 @@
     <FilePath Value="www\jquery.mobile-1.0.1.js"/>
     <FilePath Value="www\jquery.mobile.structure-1.0.1.css"/>
     <FilePath Value="www\master.css"/>
-    <FilePath Value="www\mysessions.html"/>
     <FilePath Value="www\stopGap.js"/>
     <FilePath Value="www\styles.css"/>
+    <FilePath Value="www\twitter.html"/>
     <FilePath Value="www\images\ajax-loader.png"/>
     <FilePath Value="www\images\design_by_logo.png"/>
-    <FilePath Value="www\images\foo.png"/>
     <FilePath Value="www\images\header-background.png"/>
     <FilePath Value="www\images\icons-18-black.png"/>
     <FilePath Value="www\images\icons-18-white.png"/>

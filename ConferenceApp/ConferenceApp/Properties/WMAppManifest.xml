@@ -1,11 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{3fafeff7-75ee-4388-bfce-cf7a7f5bc0f7}" Title="ConferenceApp" 
-       RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  
-       Author="ConferenceApp author" 
-       Description="PhoneGap for Windows Phone 7" 
-       Publisher="ConferenceApp">
-    
+  <App xmlns="" ProductID="{3fafeff7-75ee-4388-bfce-cf7a7f5bc0f7}" Title="ConferenceApp" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="ConferenceApp author" Description="PhoneGap for Windows Phone 7" Publisher="ConferenceApp">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
@@ -13,18 +8,16 @@
       <Capability Name="ID_CAP_LOCATION" />
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-
     </Capabilities>
-    
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="ConferenceAppToken" TaskName="_default">
         <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">SplashScreenImage.jpg</BackgroundImageURI>
           <Count>0</Count>
-          <Title>ConferenceApp</Title>
+          <Title>Fox Valley Day of .NET</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>
