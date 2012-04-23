@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+        <title>WP7</title>
+    
+        <link rel="stylesheet" href="jquery.mobile-1.0.1.css"/>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.0.1.js"></script>
+            
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+         <!--<script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
+
+        <script type="text/javascript">
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // once the device ready event fires, you can safely do your thing! -jm
+            function onDeviceReady() {
+                console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+                navigator.camera.getPicture(onSuccess, onError, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+
+
+            }
+
+            function onSuccess(fileUri) {
+                var element = document.getElementById('camera');
+                element.innerHTML = fileUri + '<br />';
+                element.innerHTML += '<img height=300 width=200 src=' + fileUri + ' alt="cordova image"></img>'
+            }
+
+            function onError() {
+
+            }
+
+        </script>
+        
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function () {
+                $.mobile.autoInitializePage = false;
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.touchOverflowEnabled = false;
+                $.mobile.defaultDialogTransition = 'none';
+                $.mobile.loadingMessage = 'Daten werden geladen...';
+            });
+</script>
+    </head>
+
+    <body>
+
+        <div id="twitter" data-role="page">
+            <div data-role="header">
+                <div id="Div38" class="headerbio">Acceleromter</div>
+            </div>
+
+            <div data-role="content" class="contentDisplay">
+                <div id="camera">Waiting for camera...</div>
+
+            </div><!-- /content -->
+            <img src="images/design_by_logo.png" width="148" height="78">
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" rel="external" >Home</a></li>
+                        <li><a href="demos.html" rel="external" >Demos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <!--
+    <script type="text/javascript">
+        StopGap();
+    </script> -->
+</html>
+
+

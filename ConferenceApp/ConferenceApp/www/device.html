@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+        <title>WP7</title>
+    
+        <link rel="stylesheet" href="jquery.mobile-1.0.1.css"/>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.0.1.js"></script>
+            
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+         <!--<script type="text/javascript" charset="utf-8" src="stopgap.js"></script>-->
+
+        <script type="text/javascript">
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // once the device ready event fires, you can safely do your thing! -jm
+            function onDeviceReady() {
+                console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+                console.log("Name:" + window.device.cordova);
+                $('#devicename').html(window.device.name);
+                $('#devicephonegap').html(window.device.cordova);
+                $('#deviceplatfroms').html(window.device.platform);
+                $('#deviceuuid').html(window.device.uuid);
+                $('#deviceversion').html(window.device.version);
+            }
+
+        </script>
+        
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function () {
+                $.mobile.autoInitializePage = false;
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.touchOverflowEnabled = false;
+                $.mobile.defaultDialogTransition = 'none';
+                $.mobile.loadingMessage = 'Daten werden geladen...';
+            });
+</script>
+    </head>
+
+    <body>
+
+        <div id="twitter" data-role="page">
+            <div data-role="header">
+                <div id="Div38" class="headerbio">Device</div>
+            </div>
+
+            <div data-role="content" class="contentDisplay">
+                <p id="devicename"></p>
+                <p id="devicephonegap"></p>
+                <p id="deviceplatfroms"></p>
+                <p id="deviceuuid"></p>
+                <p id="deviceversion"></p>
+            </div><!-- /content -->
+            <img src="images/design_by_logo.png" width="148" height="78">
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" rel="external" >Home</a></li>
+                        <li><a href="demos.html" rel="external" >Demos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <!--
+    <script type="text/javascript">
+        StopGap();
+    </script> -->
+</html>
+
